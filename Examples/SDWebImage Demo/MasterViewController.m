@@ -73,7 +73,8 @@
                     @"https://s2.ax1x.com/2019/11/01/KHYIgJ.gif",
                     @"https://raw.githubusercontent.com/icons8/flat-color-icons/master/pdf/stack_of_photos.pdf",
                     @"https://nr-platform.s3.amazonaws.com/uploads/platform/published_extension/branding_icon/275/AmazonS3.png",
-                    @"http://via.placeholder.com/200x200.jpg",
+                    @"https://res.cloudinary.com/dwpjzbyux/raw/upload/v1666474070/RawDemo/raw_vebed5.NEF",
+                    @"https://placehold.co/200x200.jpg",
                     nil];
 
         for (int i=1; i<25; i++) {
@@ -113,7 +114,7 @@
     __weak SDAnimatedImageView *imageView = cell.customImageView;
     [imageView sd_setImageWithURL:[NSURL URLWithString:self.objects[indexPath.row]]
                  placeholderImage:placeholderImage
-                          options:indexPath.row == 0 ? SDWebImageRefreshCached : 0
+                          options:0
                           context:@{SDWebImageContextImageThumbnailPixelSize : @(CGSizeMake(180, 120))}
                          progress:nil
                         completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
